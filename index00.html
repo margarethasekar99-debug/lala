@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karawitan JOGSA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="header">
+        <div class="logo-title">
+            <h1>Karawitan JOGSA</h1>
+            <p>Pelestarian seni tradisional jawa untuk generasi muda</p>
+        </div>
+    </div>
+</header>
+
+<nav id="mainNav">
+    <ul id="navList"></ul>
+</nav>
+
+<div id="userInfoBar" class="user-info" style="display: none;">
+    <div id="userDetails"></div>
+    <a href="#" id="logoutBtn" class="logout-btn">Logout</a>
+</div>
+<div id="adminPanelContainer"></div>
+
+<section id="home" class="home">
+    <h1>Selamat Datang Di Website Resmi Karawitan JOGSA</h1>
+    <p>Website resmi karawitan JOGSA yang memuat informasi tentang kegiatan, prestasi, dan anggota karawitan.</p>
+    <p>Karawitan JOGSA adalah organisasi yang bergerak di bidang seni musik tradisional Indonesia, khususnya dalam menjaga dan mengembangkan budaya musik tradisional Jawa pada generasi muda.</p>
+    <a href="#pendaftaran" id="openRecruitmentBtn" class="home-btn">Open Recruitment</a>
+</section>
+
+<section id="tentang" class="container">
+    <div class="section-title">
+        <h2>Tentang Karawitan JOGSA</h2>
+        <p>Informasi lengkap mengenai ekstra karawitan JOGSA</p>
+    </div>
+    <div class="about-grid" id="tentangGrid"></div>
+</section>
+
+<section id="artikel" class="container">
+    <div class="section-title">
+        <h2>Artikel Terkini</h2>
+        <p>Informasi seputar karawitan dan budaya Jawa</p>
+    </div>
+    <div class="card" id="artikelContent"></div>
+</section>
+
+<section id="galeri" class="container">
+    <div class="section-title">
+        <h2>Galeri Kegiatan & Penghargaan</h2>
+        <p>Dokumentasi kegiatan dan penghargaan Karawitan JOGSA</p>
+    </div>
+    <div class="card" id="galeriContent">
+        <div id="galleryImages" class="gallery-grid"></div>
+    </div>
+</section>
+
+<section id="kontak" class="container">
+    <div class="section-title">
+        <h2>Kontak</h2>
+        <p>Lihat informasi kontak kami</p>
+    </div>
+    <div class="card" id="kontakContent"></div>
+</section>
+
+<section id="pendaftaran" class="container">
+    <div class="section-title">
+        <h2>Formulir Pendaftaran</h2>
+        <p>Isi formulir dibawah ini untuk bergabung menjadi anggota karawitan JOGSA</p>
+    </div>
+    <div class="card">
+        <form id="registerForm">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Nama lengkap" required>
+            <label for="alat_musik">Alat Musik</label>
+            <input type="text" id="alat_musik" placeholder="Main alat musik apa?" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Masukkan email" required>
+            <label for="kelas">Kelas</label>
+            <select id="kelas" required>
+                <option value="">Pilih Kelas</option>
+                <option>XA</option><option>XB</option><option>XC</option><option>XD</option>
+                <option>XE</option><option>XF</option><option>XG</option><option>XH</option>
+                <option>XI.1</option><option>XI.2</option><option>XI.3</option><option>XI.4</option>
+                <option>XI.5</option><option>XI.6</option><option>XI.7</option><option>XI.8</option>
+                <option>XII.1</option><option>XII.2</option><option>XII.3</option><option>XII.4</option>
+                <option>XII.5</option><option>XII.6</option><option>XII.7</option><option>XII.8</option>
+            </select>
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" rows="4" placeholder="Alasan ingin bergabung"></textarea>
+            <button type="submit">Kirim Pendaftaran (Anggota Biasa)</button>
+        </form>
+        <div id="adminRegisterContainer"></div>
+    </div>
+</section>
+
+<section id="loginsection" class="container">
+    <div class="section-title">
+        <h2>Login Anggota</h2>
+        <p>Masuk menggunakan akun yang telah terdaftar</p>
+    </div>
+    <div class="card login-box">
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Nama lengkap (siswa) atau username admin" required>
+            <input type="text" id="loginKelas" placeholder="Kelas (untuk siswa)" required>
+            <input type="text" id="loginAlat" placeholder="Alat musik (untuk siswa)" required>
+            <input type="password" id="loginPassword" placeholder="Password (khusus admin)">
+            <button type="submit">Masuk</button>
+        </form>
+        <p style="margin-top:10px; font-size:12px;">*Siswa: cukup isi nama, kelas, alat musik (password diabaikan). Admin: gunakan username dan password yang didaftarkan.</p>
+    </div>
+</section>
+
+<section id="presensi" class="container">
+    <div class="section-title">
+        <h2>Presensi Kehadiran</h2>
+        <p id="presensiMessage">Isi presensi kehadiran setelah login</p>
+    </div>
+    <div class="card">
+        <div class="presensi-box" id="presensiBox">
+            <form id="presenceForm">
+                <select id="statusHadir" required>
+                    <option value="hadir">Hadir</option>
+                    <option value="tidak hadir">Tidak Hadir</option>
+                </select>
+                <textarea id="alasanTidakHadir" rows="4" placeholder="Alasan jika tidak hadir"></textarea>
+                <button type="submit">Kirim Presensi</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="card">
+        <h2>Data Kehadiran Semua Anggota</h2>
+        <div style="overflow-x: auto;">
+            <table id="attendanceTable">
+                <thead><tr><th>No</th><th>Nama</th><th>Kelas</th><th>Alat Musik</th><th>Status</th><th>Alasan</th><th>Waktu</th></tr></thead>
+                <tbody id="attendanceTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Karawitan JOGSA | Pelestarian Budaya Jawa</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background-color: #f4f6f9;
+    color: #333;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header {
+    background-color: #1f2937;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.logo-title h1 { font-size: 24px; }
+.logo-title p { margin-top: 5px; color: #9ca3af; }
+nav {
+    background-color: #374151;
+    padding: 14px;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover { color: #facc15; }
+.home {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1920x600?text=Karawitan+JOGSA');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+.home h1 { font-size: 50px; margin-bottom: 20px; }
+.home p { max-width: 850px; line-height: 1.8; margin-bottom: 15px; font-size: 18px; }
+.home-btn {
+    margin-top: 25px;
+    background-color: #facc15;
+    color: #1f2937;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.section-title h2 { font-size: 35px; margin-bottom: 10px; }
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+.about-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+form { display: grid; gap: 15px; }
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #374151;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover { background-color: #4b5563; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+th { background-color: #4b5563; color: white; }
+.presensi-box {
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+.login-box {
+    max-width: 500px;
+    margin: 40px auto;
+}
+.user-info {
+    background-color: #374151;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-radius: 40px;
+    margin: 15px 20px 0 20px;
+    color: white;
+}
+.logout-btn {
+    background-color: #1f2937;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.admin-panel {
+    background-color: #fef9c3;
+    border: 1px solid #facc15;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.gallery-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+.admin-reg-box {
+    background-color: #e0f2fe;
+    border: 1px solid #0ea5e9;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+}
+@media (max-width: 900px) {
+    .home h1 { font-size: 35px; }
+}
